@@ -70,7 +70,7 @@ export default function Register() {
         </pre>
           ),
         });
-        navigate("/")
+        navigate("/login")
       } else {
         const errorData = await response.json(); // Try to parse error details
         toast({
