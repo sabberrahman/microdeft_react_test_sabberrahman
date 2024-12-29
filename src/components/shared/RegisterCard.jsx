@@ -147,7 +147,7 @@ export default function Register() {
         <Button type="submit" className="w-full">Submit</Button>
        <div className='flex gap-2 justify-center'>
              <h3>Already have a account?</h3>
-            <Link to={"/login"} className='text-[#006239] font-semibold underline '>Login</Link>
+            <Link to={"/login"} className='text-[#006239] font-semibold underline '>Login </Link>
              </div>
       </form>
     </Form>

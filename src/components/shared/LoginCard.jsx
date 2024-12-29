@@ -57,12 +57,19 @@ export default function LoginCard() {
           body: JSON.stringify(data),
         }
       );
-      console.log(response)
+     
+
+    //  console.log(response)
       if (response.ok) {
+        const result = await response.json();
+        localStorage.setItem("authToken", result.data.token);
         toast({
-            title: "Login Success ✅",
+            
             description: (
-             <h1 className="text-green-500 text-md "> Create courses and share Knowledge</h1>
+              <div>
+                <h1 className="text-xl text-[#2fb277]">Login Successful 👻</h1>
+             <h1 className="text-[#3dcd8c] text-md "> Create courses and share Knowledge</h1>
+             </div>
             ),
             variant:"primary",
           });
