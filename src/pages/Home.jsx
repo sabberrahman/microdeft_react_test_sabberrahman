@@ -55,7 +55,7 @@ function Home() {
     {courses.map((course)=>(
 
       <div key={course.id}>
-      <div  className='text-white border-[1.5px] border-[#2e2f2f]/40 rounded-md p-2 mb-2 md:mb-2 bg-[#161617] md:w-[260px] xl:w-[340px] hover:border-[#2e2f2f] group cursor-pointer'>
+      <div  className='text-white border-[1.5px] border-[#2e2f2f]/40 rounded-md p-2 mb-2 md:mb-2 bg-[#161617] md:w-[260px] xl:w-[340px] hover:border-[#2e2f2f] group cursor-pointer w-[250px]'>
         
         <div className='relative border-b border-gray-700/60'>
           {/* images + color */}
@@ -72,7 +72,7 @@ function Home() {
         <div className=' flex justify-between p-2 border-b border-gray-700/60 '>
           {/* author + time  */}
           <h1 className='text-sm opacity-80'>@{course.author.name}</h1>
-          <h1 className='text-sm opacity-30'>{course.created_at}</h1>
+          <h1 className='text-xs md:text-sm opacity-30'>{course.created_at}</h1>
         </div>
 
         <div className='flex justify-center items-center text-sm mt-1 opacity-60 '>
