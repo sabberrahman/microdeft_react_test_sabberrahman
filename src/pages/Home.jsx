@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { ArrowUpRightIcon } from 'lucide-react';
+import AddCourse from '@/components/shared/AddCourse';
 
 
 
@@ -30,10 +31,7 @@ function Home() {
         if (!response.status) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
-     // console.log(response.data)
-        // const data = await response.json();
-        // setCourses(data); 
-        // console.log(data); 
+ 
          console.log(courses)
       } catch (error) {
         console.error("Error fetching course data:", error);
@@ -49,15 +47,15 @@ function Home() {
       <h1 className='text-5xl md:text-6xl text-[#fbfafb]'>Skill Up in Days</h1>
       <h1 className='text-4xl md:text-5xl text-[#3fcf8f]'>Thrive for Years</h1>
       <p className='text-slate-300/60 w-[250px] md:w-[360px] mx-auto text-sm md:text-md mt-4'>Step into the future with cutting-edge courses that prepare you for success. Learn, grow, and lead in your industry like never before.</p>
-      <button className='bg-[#016339] text-[#f8f9f8] px-4 py-2 rounded-md mt-2 border-2 border-[#126d46]'>+ Add New Course </button>
+    <AddCourse/>
     </div>
 
     {/* Courses */}
-    <div className='md:grid md:grid-cols-2 lg:grid-cols-3 mt-8  px-10 max-w-[1200px] mx-auto'>
+    <div className='md:grid md:grid-cols-2 lg:grid-cols-3 mt-8  px-10 max-w-[1200px] mx-auto '>
     {courses.map((course)=>(
 
       <div key={course.id}>
-      <div  className='text-white border-[1.5px] border-[#2e2f2f]/40 rounded-md p-2 mb-2 lg:mb-0 bg-[#161617] md:w-[260px] xl:w-[340px] hover:border-[#2e2f2f] group cursor-pointer'>
+      <div  className='text-white border-[1.5px] border-[#2e2f2f]/40 rounded-md p-2 mb-2 md:mb-2 bg-[#161617] md:w-[260px] xl:w-[340px] hover:border-[#2e2f2f] group cursor-pointer'>
         
         <div className='relative border-b border-gray-700/60'>
           {/* images + color */}
