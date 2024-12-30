@@ -53,6 +53,7 @@ export default function LoginCard() {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
+             "Authorization": `Bearer`,
           },
           body: JSON.stringify(data),
         }
