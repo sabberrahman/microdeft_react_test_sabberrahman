@@ -1,6 +1,17 @@
 ##  Microdeft frontend 
 ![alt](./mircodeft.png)
 
+### Try this to bypass cors error 
+Email ->
+```js
+ test12@gmail.com   
+```
+Password ->
+```js
+ test@123  
+```
+
+
 ``` js
 file structure:
 └── sabberrahman-microdeft_react_test_sabberrahman/
